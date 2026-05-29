@@ -288,26 +288,8 @@ Deployment notes:
 
 ---
 
-## 12) How AI can be added later (without rewrite)
 
-Already prepared:
-
-- `MessageProvider` interface for pluggable providers
-- `useChatbot({ provider })` supports provider injection
-- `ai-message-provider.stub.ts` ready to implement
-- Message metadata (`faqId`, `flowStep`, etc.) useful for LLM context
-
-Suggested AI evolution:
-
-1. Add `POST /api/chat` for AI responses (streaming optional)
-2. Implement `AiMessageProvider` using that route
-3. Use hybrid strategy:
-   - try exact FAQ first
-   - fallback to AI when no direct FAQ match
-
----
-
-## 13) Tech stack
+## 12) Tech stack
 
 - Next.js 15 (App Router)
 - TypeScript
@@ -317,7 +299,7 @@ Suggested AI evolution:
 
 ---
 
-## 14) Quick troubleshooting
+## 13) Quick troubleshooting
 
 - **Chat opens but shows no options**
   - Verify `.env.local`
